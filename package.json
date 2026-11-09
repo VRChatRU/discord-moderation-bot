@@ -1,0 +1,22 @@
+{
+  "name": "discord-moderation-bot",
+  "module": "discord-moderation-bot.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun --no-install discord-moderation-bot.ts",
+    "dev": "bun --no-install --watch discord-moderation-bot.ts",
+    "typecheck": "bun check --no-script",
+    "check": "bun run typecheck && bun test",
+    "preview": "bun --no-install src/preview.ts",
+    "preflight": "bun --no-install src/preflight.ts",
+    "format": "bun fmt --no-script discord-moderation-bot.ts src plugins tests package.json tsconfig.json README.md"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4"
+  },
+  "dependencies": {
+    "discord.js": "14.28.1"
+  },
+  "packageManager": "bun@1.4.4"
+}
